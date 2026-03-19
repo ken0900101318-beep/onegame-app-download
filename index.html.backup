@@ -235,37 +235,11 @@
             if (device === 'android') {
                 const androidBtn = document.getElementById('androidBtn');
                 androidBtn.classList.add('recommended');
-                // 使用 DOM 操作（安全）
-                androidBtn.textContent = '';
-                const icon = document.createElement('span');
-                icon.className = 'btn-icon';
-                icon.textContent = '🤖';
-                const text = document.createElement('span');
-                text.className = 'btn-text';
-                text.textContent = 'Android 版下載';
-                const badge = document.createElement('span');
-                badge.className = 'device-badge';
-                badge.textContent = '推薦';
-                androidBtn.appendChild(icon);
-                androidBtn.appendChild(text);
-                androidBtn.appendChild(badge);
+                androidBtn.innerHTML = '<span class="btn-icon">🤖</span><span class="btn-text">Android 版下載</span><span class="device-badge">推薦</span>';
             } else if (device === 'ios') {
                 const iosBtn = document.getElementById('iosBtn');
                 iosBtn.classList.add('recommended');
-                // 使用 DOM 操作（安全）
-                iosBtn.textContent = '';
-                const icon = document.createElement('span');
-                icon.className = 'btn-icon';
-                icon.textContent = '🍎';
-                const text = document.createElement('span');
-                text.className = 'btn-text';
-                text.textContent = 'iOS App Store';
-                const badge = document.createElement('span');
-                badge.className = 'device-badge';
-                badge.textContent = '推薦';
-                iosBtn.appendChild(icon);
-                iosBtn.appendChild(text);
-                iosBtn.appendChild(badge);
+                iosBtn.innerHTML = '<span class="btn-icon">🍎</span><span class="btn-text">iOS App Store</span><span class="device-badge">推薦</span>';
             }
         });
     </script>
